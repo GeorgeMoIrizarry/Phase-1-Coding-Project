@@ -1,18 +1,18 @@
-/* background-color {
-    color: blue;
-} */
+body {
+    background-image: url(../images/FinalAttempt.jpg)
+}
 #banner {
     position : absolute;
     top : 0px;
     left : 0px;
     height : 70px;
-    
-
+    width : 100%;
 }
+
 #dragonBallLogo {
     position : absolute;
     top : -90px;
-    left : -20px;
-    width:100px; 
+    left : 0px;
+    width:250px; 
     height: auto;
 }
