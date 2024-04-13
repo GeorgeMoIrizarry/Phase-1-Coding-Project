@@ -1,3 +1,18 @@
-.background {
+/* background-color {
     color: blue;
+} */
+#banner {
+    position : absolute;
+    top : 0px;
+    left : 0px;
+    height : 70px;
+    
+
+}
+#dragonBallLogo {
+    position : absolute;
+    top : -90px;
+    left : -20px;
+    width:100px; 
+    height: auto;
 }
