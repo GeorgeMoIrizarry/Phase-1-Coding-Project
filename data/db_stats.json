@@ -115,6 +115,14 @@
                 "ki_blast"
             ],
             "planetoforigin":"Earth"
+        },
+
+        {   "id":"10",
+            "name":"Android 18"
+        },
+
+        {   "id":"11",
+            "name":"Krillin"
         }
     ]
 }

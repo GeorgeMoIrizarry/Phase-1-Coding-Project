@@ -1,5 +1,9 @@
 body {
-    background-image: url(../images/FinalAttempt.jpg)
+    background-image: url(../images/FinalAttempt.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 #banner {
     position : absolute;
