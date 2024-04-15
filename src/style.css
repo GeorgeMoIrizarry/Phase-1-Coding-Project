@@ -28,7 +28,7 @@ body {
 
     margin-block-end: 1rem;
 }
-#footer {
+#card-container {
     position: absolute;
     left: 0;
     bottom: 0;
