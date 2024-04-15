@@ -134,10 +134,10 @@ main {
 
     height: 100px;
     max-width: 100px;
-
+    margin-left: 60px;
     margin-block-end: 1rem;
 }
-#footer {
+#card-container {
     position: absolute;
     left: 0;
     bottom: 0;
