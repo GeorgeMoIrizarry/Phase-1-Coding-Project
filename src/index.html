@@ -8,52 +8,74 @@
 
 </head>
 <body>
-    <div id = "banner">
-        <img id = "dragonBallLogo" src="../images/Dragon-Ball-Logo.png">
-    </div>
-    
+    <section id = "main">
+        <div id = "header-content">
+            <h1 class="header">Defenders Of Earth</h1>
+            <p class="catchline"> 
+                JavaScript edition
+            </p>
+            <img id = "dragonBallLogo" src="../images/Dragon-Ball-Logo.png">
+        </div>
+        <hr>
 
-    <div id="#cardbox"> 
-        <div id = "#card1">
-            <img>      <!-- put in a default placeholder image here -->
+        <div class="content"> 
+            <div class = "card-player">
+                <img id="image-player-1" src="../images/crystalBall.png">
+                <div class="introduce-player" id="introduce-player1">Unknown</div>
+                <div class="player-stats" id="introduce-player1-stats">?</div>
+            </div>
             
-            <!-- List some stats placeholders here: Name Power Level 
-                 Health Planet of Origin-->
+            <div class = "card-player">
+                <img id="image-player-2" src="../images/crystalBall.png">
+                <div class="introduce-player" id="introduce-player2">Unknown</div>
+                <div class="player-stats" id="introduce-player2-stats">?</div>
+            </div>
         </div>
+
+        <div class=""</div>
+
+        <!-- <div id = "selectfightersbutton">
+            <label for="fighter1">Choose Your Fighter</label>
+            <select name="fighter1" id = "fighter1"> 
+                <!-- <option value="UNKNOWN">UNKNOWN</option> -->
+                <!-- populate remaining options dynamicly by js -->
+            <!-- </select>
+            
+            <label for="fighter2">Choose Your Fighter</label>
+            <select name="fighter2" id="fighter2">  -->
+                <!-- <option value="UNKNOWN">UNKNOWN</option> -->
+                <!-- populate remaining options dynamicly by js -->
+                            <!-- add <option> tags here -->
+            <!-- </select>
+        </div> -->
         
-        <div id = "card2">
-            <!-- Same as Card 1 -->
+
+        <div class="get-ready">
+            <img src="/img/vsLogo.png" id="vs-logo" alt="">
+            <button id="launch-battle" onclick="launchBattle()">Fight!
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            
+            <button id="reload" onclick="window.location.reload()">
+                <i class="fa-solid fa-rotate-far-right"></i>
+            </button>
+
+
+            <form id="fight">
+                <button id = "fight">FIGHT!</button>  
+                <!-- should be greyed until 2 fighters are chosen -->
+                <!-- add <option> tags here -->
+            </form>
+            </div>
         </div>
-    </div>
-    
 
-    <div id = "selectfightersbutton">
-
-        <label for="fighter1">Choose Your Fighter</label>
-        <select name="fighter1" id = "fighter1"> 
-            <!-- <option value="UNKNOWN">UNKNOWN</option> -->
-            <!-- populate remaining options dynamicly by js -->
-        </select>
-        
-        <label for="fighter2">Choose Your Fighter</label>
-        <select name="fighter2" id="fighter2"> 
-            <!-- <option value="UNKNOWN">UNKNOWN</option> -->
-             <!-- populate remaining options dynamicly by js -->
-                         <!-- add <option> tags here -->
-        </select>
-    
-    </div>
-    
-    <div id="fightbutton">
-        <form id="fight">
-            <button id = "fight">FIGHT!</button>  
-            <!-- should be greyed until 2 fighters are chosen -->
-            <!-- add <option> tags here -->
-        </form>
-        </div>
-    </div>
-
+Georges-branch
     <div id="card-container">
+
+
+    </section>
+    <div id="footer">
+main
         <img class="fighter-images" src="../images/GokuSuperSaiyan.png">
         <img class="fighter-images" src="../images/VegetaSuperSaiyan.png">
         <img class="fighter-images" src="../images/Trunks.png">
