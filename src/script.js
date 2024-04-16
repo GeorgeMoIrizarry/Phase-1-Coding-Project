@@ -1,8 +1,11 @@
 const imagePlayOne = document.querySelector("#image-player-1")
 
 const imagePlayTwo = document.querySelector("#image-player-2")
+
 const playerOneName = document.querySelector("#introduce-player1")
-playerOneName.textContent = "hello"
+
+const playerTwoName = document.querySelector("#introduce-player2")
+
 const url = "http://localhost:3000/fighters"
 
 const popFighterInfo = (images) => {
@@ -12,11 +15,15 @@ const popFighterInfo = (images) => {
     .then((resp) => resp.json())
     .then((data) => placeCards(data))
 function placeCards(fighters) {
-     fighters.forEach((fighterInfo) => {
+    fighters.forEach((fighterInfo) => {
             if (imgTar.id == fighterInfo.id && imagePlayOne.src == "file://wsl.localhost/Ubuntu/home/moji_mo-jo/Development/code/phase-1/Phase-1-Coding-Project/images/crystalBall.png" ) {
                 imagePlayOne.src = imgTar.src
+                playerOneName.textContent = fighterInfo.name
+
             } else if (imgTar.id == fighterInfo.id && imagePlayTwo.src == "file://wsl.localhost/Ubuntu/home/moji_mo-jo/Development/code/phase-1/Phase-1-Coding-Project/images/crystalBall.png" ) {
                 imagePlayTwo.src = imgTar.src
+                playerTwoName.textContent = fighterInfo.name
+
             }
         })
 }
