@@ -5,8 +5,10 @@ const imagePlayTwo = document.querySelector("#image-player-2")
 const playerOneName = document.querySelector("#introduce-player1")
 const playerOneNameStats = document.querySelector("#introduce-player1-stats")
 
+
 const playerTwoName = document.querySelector("#introduce-player2")
 const playerTwoNameStats = document.querySelector("#introduce-player2-stats")
+
 console.log(imagePlayOne.src)
 const url = "http://localhost:3000/fighters"
 
@@ -17,7 +19,8 @@ const popFighterInfo = (images) => {
     .then((resp) => resp.json())
     .then((data) => placeCards(data))
 function placeCards(fighters) {
-    
+    const planetOriginOne = document.querySelector("#planet-origin")
+    const planetOriginTwo = document.querySelector("#planet-origin2")
     fighters.forEach((fighterInfo) => {
         
             if (imgTar.id == fighterInfo.id && selected === 0 ) {
@@ -25,13 +28,14 @@ function placeCards(fighters) {
                 imagePlayOne.src = imgTar.src
                 playerOneName.textContent = fighterInfo.name
                 playerOneNameStats.textContent = fighterInfo.powerlevel
-                
+                planetOriginOne.textContent = fighterInfo.planetoforigin
                 console.log(selected)
             } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
                 selected++
                 imagePlayTwo.src = imgTar.src
                 playerTwoName.textContent = fighterInfo.name
                 playerTwoNameStats.textContent = fighterInfo.powerlevel
+                planetOriginTwo.textContent = fighterInfo.planetoforigin
             }
             
         })
