@@ -26,3 +26,4 @@ function renderFighterInfo(fighters){
     })
     return cardObj
 }
+
