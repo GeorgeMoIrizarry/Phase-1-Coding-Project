@@ -24,13 +24,14 @@ function placeCards(fighters) {
                 selected++
                 imagePlayOne.src = imgTar.src
                 playerOneName.textContent = fighterInfo.name
-                playerOneNameStats.text = fighterInfo.powerlevel
+                playerOneNameStats.textContent = fighterInfo.powerlevel
+                
                 console.log(selected)
             } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
                 selected++
                 imagePlayTwo.src = imgTar.src
                 playerTwoName.textContent = fighterInfo.name
-                playerOneNameStats.text = fighterInfo.powerlevel
+                playerTwoNameStats.textContent = fighterInfo.powerlevel
             }
             
         })
