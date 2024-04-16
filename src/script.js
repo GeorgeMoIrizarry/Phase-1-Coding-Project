@@ -32,6 +32,9 @@ const fighterCard = () => {
             element.style.border = `none`
         })
         element.addEventListener('click', popFighterInfo)
+        element.addEventListener('click', () => {
+            element.style.border = '4px solid yellow'
+        })
     });
 }
 fighterCard()
