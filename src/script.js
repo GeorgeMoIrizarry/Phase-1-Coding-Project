@@ -1,7 +1,8 @@
 const imagePlayOne = document.querySelector("#image-player-1")
 
 const imagePlayTwo = document.querySelector("#image-player-2")
-
+const playerOneName = document.querySelector("#introduce-player1")
+playerOneName.textContent = "hello"
 const url = "http://localhost:3000/fighters"
 
 const popFighterInfo = (images) => {
