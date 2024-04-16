@@ -1,7 +1,29 @@
+const imagePlayOne = document.querySelector("#image-player-1")
+
+const imagePlayTwo = document.querySelector("#image-player-2")
+
 const url = "http://localhost:3000/fighters"
+
+const popFighterInfo = (images) => {
+    let imgTar = images.target
+    console.log(imagePlayOne.src)
+    fetch(url)
+    .then((resp) => resp.json())
+    .then((data) => placeCards(data))
+function placeCards(fighters) {
+     fighters.forEach((fighterInfo) => {
+            if (imgTar.id == fighterInfo.id && imagePlayOne.src == "file://wsl.localhost/Ubuntu/home/moji_mo-jo/Development/code/phase-1/Phase-1-Coding-Project/images/crystalBall.png" ) {
+                imagePlayOne.src = imgTar.src
+            } else if (imgTar.id == fighterInfo.id && imagePlayTwo.src == "file://wsl.localhost/Ubuntu/home/moji_mo-jo/Development/code/phase-1/Phase-1-Coding-Project/images/crystalBall.png" ) {
+                imagePlayTwo.src = imgTar.src
+            }
+        })
+}
+}
+    
+
 const fighterCards = document.querySelectorAll(".fighter-images")
-function fighterCard() {
-    let imageOne = document.getElementById("image-player-1")
+const fighterCard = () => {
     fighterCards.forEach(element => {
         element.addEventListener('mouseover', () => {
             element.style.border = '1px solid yellow'
@@ -9,9 +31,7 @@ function fighterCard() {
         element.addEventListener('mouseout', () => {
             element.style.border = `none`
         })
-        element.addEventListener('click', () => {
-            console.log(imageOne)
-        })
+        element.addEventListener('click', popFighterInfo)
     });
 }
 fighterCard()
@@ -25,4 +45,8 @@ function renderFighterInfo(fighters){
         cardObj.push(fighterObj)
     })
     return cardObj
+
 }
+
+
+// console.log(imgTar.id)
