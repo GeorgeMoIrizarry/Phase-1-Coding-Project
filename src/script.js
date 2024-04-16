@@ -26,6 +26,7 @@ function placeCards(fighters) {
                 playerOneName.textContent = fighterInfo.name
                 console.log(selected)
             } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
+                selected++
                 imagePlayTwo.src = imgTar.src
                 playerTwoName.textContent = fighterInfo.name
 
