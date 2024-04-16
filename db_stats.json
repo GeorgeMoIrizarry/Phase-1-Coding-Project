@@ -3,7 +3,6 @@
         {
             "id":"1",
             "name":"Goku",
-            "image": "gokuPremium.png",
             "powerlevel": "140000",
             "attacks": [
                 "punch",
@@ -16,7 +15,6 @@
         {
             "id":"2",
             "name":"Vegeta",
-            "image": "vegetaNormal.png",
             "powerlevel": "100000",
             "attacks":[
                 "punch",
@@ -29,7 +27,6 @@
         {
             "id":"3",
             "name":"Roshi",
-            "image": "roshiPremium.png",
             "powerlevel": "40000",
             "attacks":[
                 "punch",
@@ -42,7 +39,6 @@
         {
             "id":"4",
             "name":"Trunks",
-            "image": "trunksPremium.png",
             "powerlevel": "120000",
             "attacks":[
                 "punch",
@@ -55,7 +51,6 @@
         {
             "id":"5",
             "name":"Gohan",
-            "image": "gothanNormal.png",
             "powerlevel": "110000",
             "attacks":[
                 "punch",
@@ -68,7 +63,6 @@
         {
             "id":"6",
             "name":"Piccolo",
-            "image":"piccoloNormal.png",
             "powerlevel":"80000",
             "attacks":[
                 "punch",
@@ -81,7 +75,6 @@
         {
             "id":"7",
             "name":"Cell",
-            "image":"perfectCellNormal.png",
             "powerlevel":"130000",
             "attacks":[
                 "punch",
@@ -94,7 +87,6 @@
         {
             "id":"8",
             "name":"MajinBoo",
-            "image":"maginbooNormal.png",
             "powerlevel":"130000",
             "attacks":[
                 "punch",
@@ -107,7 +99,6 @@
         {
             "id":"9",
             "name":"Tien",
-            "image":"tenshinhanNormal.png",
             "powerlevel":"70000",
             "attacks":[
                 "punch",
@@ -118,11 +109,25 @@
         },
 
         {   "id":"10",
-            "name":"Android 18"
+            "name":"Android 18",
+            "powerlevel":"95000",
+            "attacks":[
+                "punch",
+                "destructo_disk",
+                "hyper_blitz"
+            ],
+            "planetoforigin":"Earth"
         },
 
         {   "id":"11",
-            "name":"Krillin"
+            "name":"Krillin",
+            "powerlevel":"75000",
+            "attacks":[
+                "punch",
+                "destructo_disk",
+                "kamehameha_wave"
+            ],
+            "planetoforigin":"Earth"
         }
     ]
 }

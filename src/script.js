@@ -1,7 +1,13 @@
 const imagePlayOne = document.querySelector("#image-player-1")
-
+let selected = 0
 const imagePlayTwo = document.querySelector("#image-player-2")
 
+const playerOneName = document.querySelector("#introduce-player1")
+const playerOneNameStats = document.querySelector("#introduce-player1-stats")
+
+const playerTwoName = document.querySelector("#introduce-player2")
+const playerTwoNameStats = document.querySelector("#introduce-player2-stats")
+console.log(imagePlayOne.src)
 const url = "http://localhost:3000/fighters"
 
 const popFighterInfo = (images) => {
@@ -11,12 +17,21 @@ const popFighterInfo = (images) => {
     .then((resp) => resp.json())
     .then((data) => placeCards(data))
 function placeCards(fighters) {
-     fighters.forEach((fighterInfo) => {
-            if (imgTar.id == fighterInfo.id && imagePlayOne.src == "file://wsl.localhost/Ubuntu/home/moji_mo-jo/Development/code/phase-1/Phase-1-Coding-Project/images/crystalBall.png" ) {
+    
+    fighters.forEach((fighterInfo) => {
+        
+            if (imgTar.id == fighterInfo.id && selected === 0 ) {
+                selected++
                 imagePlayOne.src = imgTar.src
-            } else if (imgTar.id == fighterInfo.id && imagePlayTwo.src == "file://wsl.localhost/Ubuntu/home/moji_mo-jo/Development/code/phase-1/Phase-1-Coding-Project/images/crystalBall.png" ) {
+                playerOneName.textContent = fighterInfo.name
+                console.log(selected)
+            } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
+                selected++
                 imagePlayTwo.src = imgTar.src
+                playerTwoName.textContent = fighterInfo.name
+
             }
+            
         })
 }
 }
@@ -32,6 +47,9 @@ const fighterCard = () => {
             element.style.border = `none`
         })
         element.addEventListener('click', popFighterInfo)
+        element.addEventListener('click', () => {
+            element.style.border = '4px solid yellow'
+        })
     });
 }
 fighterCard()
