@@ -29,7 +29,6 @@ function placeCards(fighters) {
                 playerOneName.textContent = fighterInfo.name
                 playerOneNameStats.textContent = fighterInfo.powerlevel
                 planetOriginOne.textContent = fighterInfo.planetoforigin
-                console.log(selected)
             } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
                 selected++
                 imagePlayTwo.src = imgTar.src
@@ -73,4 +72,4 @@ function renderFighterInfo(fighters){
 }
 
 
-// console.log(imgTar.id)
+console.log(selected)
