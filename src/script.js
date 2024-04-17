@@ -78,38 +78,8 @@ const fighterCard = () => {
     });
 }
 fighterCard()
-// const fightBtn2 = document.querySelector("#launch-battle")
-// fightBtn.addEventListener("click", () => {
-//     let dropdown = document.createElement('select')
-//     let dropdown2 = document.createElement('select')
-//     playerOneNameCard.appendChild(dropdown)
-//     playerTwoNameCard.appendChild(dropdown2)
-//     fetch(url)
-//     .then((resp) => resp.json())
-//     .then((data) => renderFighterAttacks(data))
-//     function renderFighterAttacks(fighterInfo) {
-//     fighterInfo.forEach((fighterObj) => {
-//         if(fighterObj.id == imagePlayOne.id) {
-//             let opt1 = document.createElement('option')
-//             let opt2 = document.createElement('option')
-//             let opt3 = document.createElement('option')
-//             opt1.textContent = fighterObj.attacks[0]
-//             opt2.textContent = fighterObj.attacks[1]
-//             opt3.textContent = fighterObj.attacks[2]
-//             dropdown.append(opt1, opt2, opt3)
-//         } else if (fighterObj.id == imagePlayTwo.id) {
-//             let opt1 = document.createElement('option')
-//             let opt2 = document.createElement('option')
-//             let opt3 = document.createElement('option')
-//             opt1.textContent = fighterObj.attacks[0]
-//             opt2.textContent = fighterObj.attacks[1]
-//             opt3.textContent = fighterObj.attacks[2]
-//             dropdown2.append(opt1, opt2, opt3)
-//         }
 
-//     })
-//     }
-// })
+
 
 fetch(url)
     .then((resp) => resp.json())
