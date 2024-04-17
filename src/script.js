@@ -21,6 +21,10 @@ const popFighterInfo = (images) => {
 function placeCards(fighters) {
     const planetOriginOne = document.querySelector("#planet-origin")
     const planetOriginTwo = document.querySelector("#planet-origin2")
+    let dropdown = document.createElement('select')
+    let dropdown2 = document.createElement('select')
+    playerOneNameCard.appendChild(dropdown)
+    playerTwoNameCard.appendChild(dropdown2)
     fighters.forEach((fighterInfo) => {
         
             if (imgTar.id == fighterInfo.id && selected === 0 ) {
@@ -30,6 +34,13 @@ function placeCards(fighters) {
                 playerOneNameStats.textContent = fighterInfo.powerlevel
                 planetOriginOne.textContent = fighterInfo.planetoforigin
                 imagePlayOne.id = fighterInfo.id
+                let opt1 = document.createElement('option')
+                let opt2 = document.createElement('option')
+                let opt3 = document.createElement('option')
+                opt1.textContent = fighterInfo.attacks[0]
+                opt2.textContent = fighterInfo.attacks[1]
+                opt3.textContent = fighterInfo.attacks[2]
+                dropdown.append(opt1, opt2, opt3)
             } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
                 selected++
                 imagePlayTwo.src = imgTar.src
@@ -37,6 +48,13 @@ function placeCards(fighters) {
                 playerTwoNameStats.textContent = fighterInfo.powerlevel
                 planetOriginTwo.textContent = fighterInfo.planetoforigin
                 imagePlayTwo.id = fighterInfo.id
+                let opt1 = document.createElement('option')
+                let opt2 = document.createElement('option')
+                let opt3 = document.createElement('option')
+                opt1.textContent = fighterInfo.attacks[0]
+                opt2.textContent = fighterInfo.attacks[1]
+                opt3.textContent = fighterInfo.attacks[2]
+                dropdown2.append(opt1, opt2, opt3)
             }
             
         })
@@ -60,38 +78,38 @@ const fighterCard = () => {
     });
 }
 fighterCard()
-const fightBtn = document.querySelector("#launch-battle")
-fightBtn.addEventListener("click", () => {
-    let dropdown = document.createElement('select')
-    let dropdown2 = document.createElement('select')
-    playerOneNameCard.appendChild(dropdown)
-    playerTwoNameCard.appendChild(dropdown2)
-    fetch(url)
-    .then((resp) => resp.json())
-    .then((data) => renderFighterAttacks(data))
-    function renderFighterAttacks(fighterInfo) {
-    fighterInfo.forEach((fighterObj) => {
-        if(fighterObj.id == imagePlayOne.id) {
-            let opt1 = document.createElement('option')
-            let opt2 = document.createElement('option')
-            let opt3 = document.createElement('option')
-            opt1.textContent = fighterObj.attacks[0]
-            opt2.textContent = fighterObj.attacks[1]
-            opt3.textContent = fighterObj.attacks[2]
-            dropdown.append(opt1, opt2, opt3)
-        } else if (fighterObj.id == imagePlayTwo.id) {
-            let opt1 = document.createElement('option')
-            let opt2 = document.createElement('option')
-            let opt3 = document.createElement('option')
-            opt1.textContent = fighterObj.attacks[0]
-            opt2.textContent = fighterObj.attacks[1]
-            opt3.textContent = fighterObj.attacks[2]
-            dropdown2.append(opt1, opt2, opt3)
-        }
+// const fightBtn2 = document.querySelector("#launch-battle")
+// fightBtn.addEventListener("click", () => {
+//     let dropdown = document.createElement('select')
+//     let dropdown2 = document.createElement('select')
+//     playerOneNameCard.appendChild(dropdown)
+//     playerTwoNameCard.appendChild(dropdown2)
+//     fetch(url)
+//     .then((resp) => resp.json())
+//     .then((data) => renderFighterAttacks(data))
+//     function renderFighterAttacks(fighterInfo) {
+//     fighterInfo.forEach((fighterObj) => {
+//         if(fighterObj.id == imagePlayOne.id) {
+//             let opt1 = document.createElement('option')
+//             let opt2 = document.createElement('option')
+//             let opt3 = document.createElement('option')
+//             opt1.textContent = fighterObj.attacks[0]
+//             opt2.textContent = fighterObj.attacks[1]
+//             opt3.textContent = fighterObj.attacks[2]
+//             dropdown.append(opt1, opt2, opt3)
+//         } else if (fighterObj.id == imagePlayTwo.id) {
+//             let opt1 = document.createElement('option')
+//             let opt2 = document.createElement('option')
+//             let opt3 = document.createElement('option')
+//             opt1.textContent = fighterObj.attacks[0]
+//             opt2.textContent = fighterObj.attacks[1]
+//             opt3.textContent = fighterObj.attacks[2]
+//             dropdown2.append(opt1, opt2, opt3)
+//         }
 
-    })
-    }
-})
+//     })
+//     }
+// })
 
 fetch(url)
     .then((resp) => resp.json())
@@ -106,18 +124,18 @@ function renderFighterInfo(fighters){
 }
 
 
-// console.log(selected)
-// const fightBtn = document.querySelector("#launch-battle")
-// fightBtn.addEventListener("click", () => {
-//     if(selected === 2){
-//         if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
-//             console.log(playerOneNameStats.textContent)
-//             console.log(playerTwoNameStats.textContent)
-//             alert(`${playerOneName.textContent} wins!`)
+console.log(selected)
+const fightBtn = document.querySelector("#launch-battle")
+fightBtn.addEventListener("click", () => {
+    if(selected === 2){
+        if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
+            console.log(playerOneNameStats.textContent)
+            console.log(playerTwoNameStats.textContent)
+            alert(`${playerOneName.textContent} wins!`)
             
-//         } else {
-//             alert(`${playerTwoName.textContent} wins`)
+        } else {
+            alert(`${playerTwoName.textContent} wins`)
             
-//         }
-//     } else return false
-// })
+        }
+    } else return false
+})
