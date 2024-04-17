@@ -5,9 +5,9 @@
             "name":"Goku",
             "powerlevel": "280,000",
             "attacks": [
-                "punch",
-                "ki_blast",
-                "kamehameha_wave"
+                "Punch",
+                "Ki blast",
+                "Kamehameha wave"
             ],
             "planetoforigin": "Vegeta"
         },
@@ -17,9 +17,9 @@
             "name":"Vegeta",
             "powerlevel": "240,000",
             "attacks":[
-                "punch",
-                "final_flash",
-                "big_bang"
+                "Punch",
+                "Final flash",
+                "Big bang"
             ],
             "planetoforigin": "Vegeta"
         },
@@ -29,9 +29,9 @@
             "name":"Roshi",
             "powerlevel": "110,000",
             "attacks":[
-                "punch",
-                "kamehameha_wave",
-                "ki_blast"
+                "Punch",
+                "Kamehameha wave",
+                "Ki blast"
             ],
             "planetoforigin": "Earth"
         },
@@ -41,9 +41,9 @@
             "name":"Trunks",
             "powerlevel": "240,000",
             "attacks":[
-                "punch",
-                "kikoukenjutsu_sword_style",
-                "ki_blast"
+                "Punch",
+                "Kikoukenjutsu sword style",
+                "Ki blast"
             ],
             "planetoforigin":"Earth"
         },
@@ -53,9 +53,9 @@
             "name":"Gohan",
             "powerlevel": "220,000",
             "attacks":[
-                "punch",
-                "burst_rush",
-                "masenko"
+                "Punch",
+                "Burst rush",
+                "Masenko"
             ],
             "planetoforigin":"Earth"
         },
@@ -65,9 +65,9 @@
             "name":"Piccolo",
             "powerlevel":"160,000",
             "attacks":[
-                "punch",
-                "masenko",
-                "special_beam_cannon"
+                "Punch",
+                "Masenko",
+                "Special beam cannon"
             ],
             "planetoforigin":"Namek"
         },
@@ -77,9 +77,9 @@
             "name":"Cell",
             "powerlevel":"260,000",
             "attacks":[
-                "punch",
-                "kamehameha_wave",
-                "spirit_bomb"
+                "Punch",
+                "Kamehameha wave",
+                "Spirit bomb"
             ],
             "planetoforigin":"Earth"
         },
@@ -89,9 +89,9 @@
             "name":"MajinBuu",
             "powerlevel":"270,000",
             "attacks":[
-                "punch",
-                "gack",
-                "angry_explosion"
+                "Punch",
+                "Gack",
+                "Angry explosion"
             ],
             "planetoforigin":"UNKNOWN"
         },
@@ -101,9 +101,9 @@
             "name":"Tien",
             "powerlevel":"140,000",
             "attacks":[
-                "punch",
-                "tribeam",
-                "ki_blast"
+                "Punch",
+                "Tribeam",
+                "Ki blast"
             ],
             "planetoforigin":"Earth"
         },
@@ -112,9 +112,9 @@
             "name":"Android 18",
             "powerlevel":"190,000",
             "attacks":[
-                "punch",
-                "destructo_disk",
-                "hyper_blitz"
+                "Punch",
+                "Destructo disk",
+                "Hyper blitz"
             ],
             "planetoforigin":"Earth"
         },
@@ -123,9 +123,9 @@
             "name":"Krillin",
             "powerlevel":"150,000",
             "attacks":[
-                "punch",
-                "destructo_disk",
-                "kamehameha_wave"
+                "Punch",
+                "Destructo disk",
+                "Kamehameha wave"
             ],
             "planetoforigin":"Earth"
         }
