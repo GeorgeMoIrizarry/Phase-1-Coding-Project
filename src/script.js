@@ -29,12 +29,14 @@ function placeCards(fighters) {
                 playerOneName.textContent = fighterInfo.name
                 playerOneNameStats.textContent = fighterInfo.powerlevel
                 planetOriginOne.textContent = fighterInfo.planetoforigin
+                imagePlayOne.id = fighterInfo.id
             } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
                 selected++
                 imagePlayTwo.src = imgTar.src
                 playerTwoName.textContent = fighterInfo.name
                 playerTwoNameStats.textContent = fighterInfo.powerlevel
                 planetOriginTwo.textContent = fighterInfo.planetoforigin
+                imagePlayTwo.id = fighterInfo.id
             }
             
         })
@@ -58,20 +60,17 @@ const fighterCard = () => {
     });
 }
 fighterCard()
-const fightBtn = document.querySelector("#launch-battle")
-fightBtn.addEventListener("click", () => {
-    if(selected === 2){
-        if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
-            console.log(playerOneNameStats.textContent)
-            console.log(playerTwoNameStats.textContent)
-            alert(`${playerOneName.textContent} wins!`)
-            
-        } else {
-            alert(`${playerTwoName.textContent} wins`)
-            
-        }
-    } else return false
-})
+// const fightBtn = document.querySelector("#launch-battle")
+// fightBtn.addEventListener("click", () => {
+//     fetch(url)
+//     .then((resp) => resp.json())
+//     .then((data) => renderFighterAttacks(data))
+//     function renderFighterAttacks(fighterInfo) {
+//     fighterInfo.forEach((fighterObj) => {
+
+//     })
+//     }
+// })
 
 fetch(url)
     .then((resp) => resp.json())
@@ -87,3 +86,17 @@ function renderFighterInfo(fighters){
 
 
 console.log(selected)
+const fightBtn = document.querySelector("#launch-battle")
+fightBtn.addEventListener("click", () => {
+    if(selected === 2){
+        if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
+            console.log(playerOneNameStats.textContent)
+            console.log(playerTwoNameStats.textContent)
+            alert(`${playerOneName.textContent} wins!`)
+            
+        } else {
+            alert(`${playerTwoName.textContent} wins`)
+            
+        }
+    } else return false
+})
