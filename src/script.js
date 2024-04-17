@@ -92,23 +92,26 @@ const fighterCard = () => {
 }
 fighterCard()
 
-
-
-fetch(url)
-    .then((resp) => resp.json())
-    .then((data) => renderFighterInfo(data))
-function renderFighterInfo(fighters){
-    const cardObj = []
-    fighters.forEach((fighterObj) => {
-        cardObj.push(fighterObj)
-    })
-    return cardObj
-
+function alertFunc1(one, atk, two, dmg) {
+    alert(`${one} ${atk} ${two} for ${dmg}! `)
+    if(playerTwoNameStats.textContent <= 0) {
+        alert(`${one} wins!`)
+    } else return false
 }
+function alertFunc1(two, atk, one, dmg) {
+    alert(`${two} ${atk} ${one} for ${dmg}! `)
+    if(playerTwoNameStats.textContent <= 0) {
+        alert(`${two} wins!`)
+    } else return false 
+}
+
 // Attack functions
 function punchOne() {
     let random = Math.floor(Math.random() * 1000)
-    console.log(random * 100)
+    let punchMulti = random * 40
+    let newStats = playerTwoNameStats.textContent
+    playerTwoNameStats.textContent = parseInt(newStats, 10) - punchMulti
+    alertFunc1(playerOneName.textContent, "punched", playerTwoName.textContent, punchMulti)
 }
 let evenCheck = 2
 function isEven(number) {

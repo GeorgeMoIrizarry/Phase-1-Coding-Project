@@ -3,7 +3,7 @@
         {
             "id":"1",
             "name":"Goku",
-            "powerlevel": "280,000",
+            "powerlevel": "280000",
             "attacks": [
                 "Punch",
                 "Ki blast",
@@ -15,7 +15,7 @@
         {
             "id":"2",
             "name":"Vegeta",
-            "powerlevel": "240,000",
+            "powerlevel": "240000",
             "attacks":[
                 "Punch",
                 "Final flash",
@@ -27,7 +27,7 @@
         {
             "id":"3",
             "name":"Roshi",
-            "powerlevel": "110,000",
+            "powerlevel": "110000",
             "attacks":[
                 "Punch",
                 "Kamehameha wave",
@@ -39,7 +39,7 @@
         {
             "id":"4",
             "name":"Trunks",
-            "powerlevel": "240,000",
+            "powerlevel": "240000",
             "attacks":[
                 "Punch",
                 "Kikoukenjutsu sword style",
@@ -51,7 +51,7 @@
         {
             "id":"5",
             "name":"Gohan",
-            "powerlevel": "220,000",
+            "powerlevel": "220000",
             "attacks":[
                 "Punch",
                 "Ki blast",
@@ -63,7 +63,7 @@
         {
             "id":"6",
             "name":"Piccolo",
-            "powerlevel":"160,000",
+            "powerlevel":"160000",
             "attacks":[
                 "Punch",
                 "Masenko",
@@ -75,7 +75,7 @@
         {
             "id":"7",
             "name":"Cell",
-            "powerlevel":"260,000",
+            "powerlevel":"260000",
             "attacks":[
                 "Punch",
                 "Kamehameha wave",
@@ -87,7 +87,7 @@
         {
             "id":"8",
             "name":"MajinBuu",
-            "powerlevel":"270,000",
+            "powerlevel":"270000",
             "attacks":[
                 "Punch",
                 "Ki blast",
@@ -99,7 +99,7 @@
         {
             "id":"9",
             "name":"Tien",
-            "powerlevel":"140,000",
+            "powerlevel":"140000",
             "attacks":[
                 "Punch",
                 "Tribeam",
@@ -110,7 +110,7 @@
 
         {   "id":"10",
             "name":"Android 18",
-            "powerlevel":"190,000",
+            "powerlevel":"190000",
             "attacks":[
                 "Punch",
                 "Destructo disk",
@@ -121,7 +121,7 @@
 
         {   "id":"11",
             "name":"Krillin",
-            "powerlevel":"150,000",
+            "powerlevel":"150000",
             "attacks":[
                 "Punch",
                 "Destructo disk",
