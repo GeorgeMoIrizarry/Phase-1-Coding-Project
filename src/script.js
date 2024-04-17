@@ -105,11 +105,18 @@ function renderFighterInfo(fighters){
     return cardObj
 
 }
+function isEven (number) {
+    return number % 2 === 0;
+  }
 const handleAtk = () => {
+    let evenCheck = 0
     let select1 = document.querySelector('#select1')
     let select2 = document.querySelector('#select2')
     select1.addEventListener('change', (e) => {
         console.log(e.target.value)
+        if(isEven(evenCheck)){
+            evenCheck++
+        }
     })
 
 }
