@@ -4,11 +4,11 @@ const imagePlayTwo = document.querySelector("#image-player-2")
 
 const playerOneName = document.querySelector("#introduce-player1")
 const playerOneNameStats = document.querySelector("#introduce-player1-stats")
-
+const playerOneNameCard = document.querySelector("#card-player1")
 
 const playerTwoName = document.querySelector("#introduce-player2")
 const playerTwoNameStats = document.querySelector("#introduce-player2-stats")
-
+const playerTwoNameCard = document.querySelector("#card-player2")
 console.log(imagePlayOne.src)
 const url = "http://localhost:3000/fighters"
 
@@ -60,17 +60,38 @@ const fighterCard = () => {
     });
 }
 fighterCard()
-// const fightBtn = document.querySelector("#launch-battle")
-// fightBtn.addEventListener("click", () => {
-//     fetch(url)
-//     .then((resp) => resp.json())
-//     .then((data) => renderFighterAttacks(data))
-//     function renderFighterAttacks(fighterInfo) {
-//     fighterInfo.forEach((fighterObj) => {
+const fightBtn = document.querySelector("#launch-battle")
+fightBtn.addEventListener("click", () => {
+    let dropdown = document.createElement('select')
+    let dropdown2 = document.createElement('select')
+    playerOneNameCard.appendChild(dropdown)
+    playerTwoNameCard.appendChild(dropdown2)
+    fetch(url)
+    .then((resp) => resp.json())
+    .then((data) => renderFighterAttacks(data))
+    function renderFighterAttacks(fighterInfo) {
+    fighterInfo.forEach((fighterObj) => {
+        if(fighterObj.id == imagePlayOne.id) {
+            let opt1 = document.createElement('option')
+            let opt2 = document.createElement('option')
+            let opt3 = document.createElement('option')
+            opt1.textContent = fighterObj.attacks[0]
+            opt2.textContent = fighterObj.attacks[1]
+            opt3.textContent = fighterObj.attacks[2]
+            dropdown.append(opt1, opt2, opt3)
+        } else if (fighterObj.id == imagePlayTwo.id) {
+            let opt1 = document.createElement('option')
+            let opt2 = document.createElement('option')
+            let opt3 = document.createElement('option')
+            opt1.textContent = fighterObj.attacks[0]
+            opt2.textContent = fighterObj.attacks[1]
+            opt3.textContent = fighterObj.attacks[2]
+            dropdown2.append(opt1, opt2, opt3)
+        }
 
-//     })
-//     }
-// })
+    })
+    }
+})
 
 fetch(url)
     .then((resp) => resp.json())
@@ -85,18 +106,18 @@ function renderFighterInfo(fighters){
 }
 
 
-console.log(selected)
-const fightBtn = document.querySelector("#launch-battle")
-fightBtn.addEventListener("click", () => {
-    if(selected === 2){
-        if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
-            console.log(playerOneNameStats.textContent)
-            console.log(playerTwoNameStats.textContent)
-            alert(`${playerOneName.textContent} wins!`)
+// console.log(selected)
+// const fightBtn = document.querySelector("#launch-battle")
+// fightBtn.addEventListener("click", () => {
+//     if(selected === 2){
+//         if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
+//             console.log(playerOneNameStats.textContent)
+//             console.log(playerTwoNameStats.textContent)
+//             alert(`${playerOneName.textContent} wins!`)
             
-        } else {
-            alert(`${playerTwoName.textContent} wins`)
+//         } else {
+//             alert(`${playerTwoName.textContent} wins`)
             
-        }
-    } else return false
-})
+//         }
+//     } else return false
+// })
