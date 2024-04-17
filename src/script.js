@@ -58,6 +58,16 @@ const fighterCard = () => {
     });
 }
 fighterCard()
+const fightBtn = document.querySelector("#launch-battle")
+fightBtn.addEventListener("click", () => {
+    if(selected === 2){
+        if(playerOneNameStats.textContent > playerTwoNameStats.textContent){
+            alert(`${playerOneName.textContent} wins!`)
+        } else {
+            alert(`${playerTwoName.textContent} wins!`)
+        }
+    } else return false
+})
 
 fetch(url)
     .then((resp) => resp.json())
