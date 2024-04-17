@@ -93,26 +93,33 @@ const fighterCard = () => {
 fighterCard()
 
 function alertFunc1(one, atk, two, dmg) {
-    alert(`${one} ${atk} ${two} for ${dmg}! `)
+    alert(`${one} ${atk} ${two} for ${dmg} damage! `)
     if(playerTwoNameStats.textContent <= 0) {
         alert(`${one} wins!`)
     } else return false
 }
-function alertFunc1(two, atk, one, dmg) {
-    alert(`${two} ${atk} ${one} for ${dmg}! `)
+function alertFunc2(two, atk, one, dmg) {
+    alert(`${two} ${atk} ${one} for ${dmg} damage! `)
     if(playerTwoNameStats.textContent <= 0) {
         alert(`${two} wins!`)
     } else return false 
 }
 
 // Attack functions
-function punchOne() {
+function punchOne(i, oppPlayerStats, name1, name2) {
     let random = Math.floor(Math.random() * 1000)
     let punchMulti = random * 40
-    let newStats = playerTwoNameStats.textContent
-    playerTwoNameStats.textContent = parseInt(newStats, 10) - punchMulti
-    alertFunc1(playerOneName.textContent, "punched", playerTwoName.textContent, punchMulti)
+    let newStats = oppPlayerStats
+    oppPlayerStats = parseInt(newStats, 10) - punchMulti
+    alertFunc[i](name1, "punched", name2, punchMulti)
 }
+// function punchTwo() {
+//     let random = Math.floor(Math.random() * 1000)
+//     let punchMulti = random * 40
+//     let newStats = playerOneNameStats.textContent
+//     playerOneNameStats.textContent = parseInt(newStats, 10) - punchMulti
+//     alertFunc1(playerTwoName.textContent, "punched", playerOneName.textContent, punchMulti)
+// }
 let evenCheck = 2
 function isEven(number) {
     return (number & 1) === 0;
@@ -127,7 +134,7 @@ const handleAtk = () => {
             
             switch (e.target.value) {
                 case 'Punch' :
-                    punchOne()
+                    punchOne("1", playerTwoNameStats.textContent, playerOneName.textContent, playerTwoName.textContent)
                     evenCheck++
                     break;
                 case 'Ki blast' :
@@ -178,14 +185,14 @@ const handleAtk = () => {
             
             switch (e.target.value) {
                 case 'Punch' :
-                    console.log('Hurray')
+                    punchOne(2, playerOneNameStats.textContent, playerTwoName.textContent, playerOneName.textContent)
                     evenCheck++
                     break;
                 case 'Ki blast' :
-                    //function
+                    kiBlastTwo()
                     break;
                 case 'Kamehameha wave' :
-                    //function
+                    kamahamahaWave
                     break;
                 case 'Final flash' :
                     //function
