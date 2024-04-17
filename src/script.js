@@ -116,6 +116,27 @@ const handleAtk = () => {
         console.log(e.target.value)
         if(isEven(evenCheck)){
             evenCheck++
+            switch (e.target.value) {
+                case 'Punch' :
+                    //function
+                    break;
+                case 'Ki blast' :
+                    //function
+                    break;
+                case 'Kamehameha wave' :
+                    //function
+                    break;
+                case 'Final flash' :
+                    //function
+                    break;
+                case 'Kikoukenjutsu sword style' :
+                    //function
+                    break;
+                case 'Masenko' :
+                    //function
+                    break;
+                case 
+            }
         }
     })
 
