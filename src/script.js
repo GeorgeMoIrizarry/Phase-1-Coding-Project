@@ -40,6 +40,9 @@ function placeCards(fighters) {
             let opt1 = document.createElement('option')
             let opt2 = document.createElement('option')
             let opt3 = document.createElement('option')
+            opt1.id = 1
+            opt2.id = 2
+            opt3.id = 3
             opt1.textContent = fighterInfo.attacks[0]
             opt2.textContent = fighterInfo.attacks[1]
             opt3.textContent = fighterInfo.attacks[2]
@@ -56,6 +59,9 @@ function placeCards(fighters) {
             let opt1 = document.createElement('option')
             let opt2 = document.createElement('option')
             let opt3 = document.createElement('option')
+            opt1.id = 4
+            opt2.id = 5
+            opt3.id = 6
             opt1.textContent = fighterInfo.attacks[0]
             opt2.textContent = fighterInfo.attacks[1]
             opt3.textContent = fighterInfo.attacks[2]
@@ -98,19 +104,25 @@ function renderFighterInfo(fighters){
 
 }
 
-
-console.log(selected)
 const fightBtn = document.querySelector("#launch-battle")
-fightBtn.addEventListener("click", () => {
-    if(selected === 2){
-        if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
-            console.log(playerOneNameStats.textContent)
-            console.log(playerTwoNameStats.textContent)
-            alert(`${playerOneName.textContent} wins!`)
+
+
+
+
+
+
+
+// const fightBtn = document.querySelector("#launch-battle")
+// fightBtn.addEventListener("click", () => {
+//     if(selected === 2){
+//         if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
+//             console.log(playerOneNameStats.textContent)
+//             console.log(playerTwoNameStats.textContent)
+//             alert(`${playerOneName.textContent} wins!`)
             
-        } else {
-            alert(`${playerTwoName.textContent} wins`)
+//         } else {
+//             alert(`${playerTwoName.textContent} wins`)
             
-        }
-    } else return false
-})
+//         }
+//     } else return false
+// })
