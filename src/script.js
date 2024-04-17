@@ -1,15 +1,21 @@
 const imagePlayOne = document.querySelector("#image-player-1")
+
 let selected = 0
+
 const imagePlayTwo = document.querySelector("#image-player-2")
 
 const playerOneName = document.querySelector("#introduce-player1")
+
 const playerOneNameStats = document.querySelector("#introduce-player1-stats")
+
 const playerOneNameCard = document.querySelector("#card-player1")
 
 const playerTwoName = document.querySelector("#introduce-player2")
+
 const playerTwoNameStats = document.querySelector("#introduce-player2-stats")
+
 const playerTwoNameCard = document.querySelector("#card-player2")
-console.log(imagePlayOne.src)
+
 const url = "http://localhost:3000/fighters"
 
 const popFighterInfo = (images) => {
@@ -26,38 +32,37 @@ function placeCards(fighters) {
     playerOneNameCard.appendChild(dropdown)
     playerTwoNameCard.appendChild(dropdown2)
     fighters.forEach((fighterInfo) => {
-        
-            if (imgTar.id == fighterInfo.id && selected === 0 ) {
-                selected++
-                imagePlayOne.src = imgTar.src
-                playerOneName.textContent = fighterInfo.name
-                playerOneNameStats.textContent = fighterInfo.powerlevel
-                planetOriginOne.textContent = fighterInfo.planetoforigin
-                imagePlayOne.id = fighterInfo.id
-                let opt1 = document.createElement('option')
-                let opt2 = document.createElement('option')
-                let opt3 = document.createElement('option')
-                opt1.textContent = fighterInfo.attacks[0]
-                opt2.textContent = fighterInfo.attacks[1]
-                opt3.textContent = fighterInfo.attacks[2]
-                dropdown.append(opt1, opt2, opt3)
-            } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
-                selected++
-                imagePlayTwo.src = imgTar.src
-                playerTwoName.textContent = fighterInfo.name
-                playerTwoNameStats.textContent = fighterInfo.powerlevel
-                planetOriginTwo.textContent = fighterInfo.planetoforigin
-                imagePlayTwo.id = fighterInfo.id
-                let opt1 = document.createElement('option')
-                let opt2 = document.createElement('option')
-                let opt3 = document.createElement('option')
-                opt1.textContent = fighterInfo.attacks[0]
-                opt2.textContent = fighterInfo.attacks[1]
-                opt3.textContent = fighterInfo.attacks[2]
-                dropdown2.append(opt1, opt2, opt3)
-            }
+        if (imgTar.id == fighterInfo.id && selected === 0 ) {
+            selected++
+            imagePlayOne.src = imgTar.src
+            playerOneName.textContent = fighterInfo.name
+            playerOneNameStats.textContent = fighterInfo.powerlevel
+            planetOriginOne.textContent = fighterInfo.planetoforigin
+            imagePlayOne.id = fighterInfo.id
+            let opt1 = document.createElement('option')
+            let opt2 = document.createElement('option')
+            let opt3 = document.createElement('option')
+            opt1.textContent = fighterInfo.attacks[0]
+            opt2.textContent = fighterInfo.attacks[1]
+            opt3.textContent = fighterInfo.attacks[2]
+            dropdown.append(opt1, opt2, opt3)
+         } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
+            selected++
+            imagePlayTwo.src = imgTar.src
+            playerTwoName.textContent = fighterInfo.name
+            playerTwoNameStats.textContent = fighterInfo.powerlevel
+            planetOriginTwo.textContent = fighterInfo.planetoforigin
+            imagePlayTwo.id = fighterInfo.id
+            let opt1 = document.createElement('option')
+            let opt2 = document.createElement('option')
+            let opt3 = document.createElement('option')
+            opt1.textContent = fighterInfo.attacks[0]
+            opt2.textContent = fighterInfo.attacks[1]
+            opt3.textContent = fighterInfo.attacks[2]
+            dropdown2.append(opt1, opt2, opt3)
+        }
             
-        })
+    })
 }
 }
     
