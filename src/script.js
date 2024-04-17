@@ -105,20 +105,22 @@ function renderFighterInfo(fighters){
     return cardObj
 
 }
-function isEven (number) {
-    return number % 2 === 0;
+let evenCheck = 2
+function isEven(number) {
+    return (number & 1) === 0;
   }
 const handleAtk = () => {
-    let evenCheck = 0
+    
     let select1 = document.querySelector('#select1')
     let select2 = document.querySelector('#select2')
     select1.addEventListener('change', (e) => {
         console.log(e.target.value)
         if(isEven(evenCheck)){
-            evenCheck++
+            
             switch (e.target.value) {
                 case 'Punch' :
-                    //function
+                    console.log('Hurray')
+                    evenCheck++
                     break;
                 case 'Ki blast' :
                     //function
@@ -135,11 +137,86 @@ const handleAtk = () => {
                 case 'Masenko' :
                     //function
                     break;
-                case 
-            }
+                case 'Special beam cannon' :
+                    //function
+                    break;
+                case 'Spirit bomb' :
+                    //function
+                    break;
+                case 'Angry explosion' :
+                    //function
+                    break;
+                case 'Tribeam' :
+                    //function
+                    break;
+                case 'Destructo disk' :
+                    //function
+                    break;
+                case 'Hyper blitz' :
+                    //function
+                    break;
+                default :
+                    console.log('fail')
+            } 
+           
+        } else {
+            return false
         }
+    
     })
+    select2.addEventListener('change', (e) => {
+        console.log(e.target.value)
+        if(isEven(evenCheck) == false){
+            
+            switch (e.target.value) {
+                case 'Punch' :
+                    console.log('Hurray')
+                    evenCheck++
+                    break;
+                case 'Ki blast' :
+                    //function
+                    break;
+                case 'Kamehameha wave' :
+                    //function
+                    break;
+                case 'Final flash' :
+                    //function
+                    break;
+                case 'Kikoukenjutsu sword style' :
+                    //function
+                    break;
+                case 'Masenko' :
+                    //function
+                    break;
+                case 'Special beam cannon' :
+                    //function
+                    break;
+                case 'Spirit bomb' :
+                    //function
+                    break;
+                case 'Angry explosion' :
+                    //function
+                    break;
+                case 'Tribeam' :
+                    //function
+                    break;
+                case 'Destructo disk' :
+                    //function
+                    break;
+                case 'Hyper blitz' :
+                    //function
+                    break;
+                default :
+                    console.log('fail')
+            } 
+           
+        } else {
+            console.log('fail')
+        }
+    } )
 
+
+    
 }
 const fightBtn = document.querySelector("#launch-battle")
 fightBtn.addEventListener('click', handleAtk)
