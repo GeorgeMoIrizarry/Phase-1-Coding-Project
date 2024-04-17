@@ -27,12 +27,10 @@ const popFighterInfo = (images) => {
 function placeCards(fighters) {
     const planetOriginOne = document.querySelector("#planet-origin")
     const planetOriginTwo = document.querySelector("#planet-origin2")
-    let dropdown = document.createElement('select')
-    let dropdown2 = document.createElement('select')
-    playerOneNameCard.appendChild(dropdown)
-    playerTwoNameCard.appendChild(dropdown2)
     fighters.forEach((fighterInfo) => {
         if (imgTar.id == fighterInfo.id && selected === 0 ) {
+            let dropdown = document.createElement('select')
+            playerOneNameCard.appendChild(dropdown)
             selected++
             imagePlayOne.src = imgTar.src
             playerOneName.textContent = fighterInfo.name
@@ -47,6 +45,8 @@ function placeCards(fighters) {
             opt3.textContent = fighterInfo.attacks[2]
             dropdown.append(opt1, opt2, opt3)
          } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
+            let dropdown2 = document.createElement('select')
+            playerTwoNameCard.appendChild(dropdown2)
             selected++
             imagePlayTwo.src = imgTar.src
             playerTwoName.textContent = fighterInfo.name
