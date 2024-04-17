@@ -105,6 +105,11 @@ function renderFighterInfo(fighters){
     return cardObj
 
 }
+// Attack functions
+function punchOne() {
+    let random = Math.floor(Math.random() * 1000)
+    console.log(random * 100)
+}
 let evenCheck = 2
 function isEven(number) {
     return (number & 1) === 0;
@@ -119,7 +124,7 @@ const handleAtk = () => {
             
             switch (e.target.value) {
                 case 'Punch' :
-                    console.log('Hurray')
+                    punchOne()
                     evenCheck++
                     break;
                 case 'Ki blast' :
