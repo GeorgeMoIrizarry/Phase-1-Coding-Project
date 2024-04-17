@@ -30,6 +30,7 @@ function placeCards(fighters) {
     fighters.forEach((fighterInfo) => {
         if (imgTar.id == fighterInfo.id && selected === 0 ) {
             let dropdown = document.createElement('select')
+            dropdown.id = "select1"
             playerOneNameCard.appendChild(dropdown)
             selected++
             imagePlayOne.src = imgTar.src
@@ -49,6 +50,7 @@ function placeCards(fighters) {
             dropdown.append(opt1, opt2, opt3)
          } else if (imgTar.id == fighterInfo.id && selected === 1  ) {
             let dropdown2 = document.createElement('select')
+            dropdown2.id = "select2"
             playerTwoNameCard.appendChild(dropdown2)
             selected++
             imagePlayTwo.src = imgTar.src
@@ -71,14 +73,14 @@ function placeCards(fighters) {
     })
 }
 }
-    
+const mouseOver = (element) => {
+    element.target.style.border = '1px solid yellow'
+}    
 
 const fighterCards = document.querySelectorAll(".fighter-images")
 const fighterCard = () => {
     fighterCards.forEach(element => {
-        element.addEventListener('mouseover', () => {
-            element.style.border = '1px solid yellow'
-            })
+        element.addEventListener('mouseover', mouseOver)
         element.addEventListener('mouseout', () => {
             element.style.border = `none`
         })
@@ -103,8 +105,16 @@ function renderFighterInfo(fighters){
     return cardObj
 
 }
+const handleAtk = () => {
+    let select1 = document.querySelector('#select1')
+    let select2 = document.querySelector('#select2')
+    select1.addEventListener('change', (e) => {
+        console.log(e.target.value)
+    })
 
+}
 const fightBtn = document.querySelector("#launch-battle")
+fightBtn.addEventListener('click', handleAtk)
 
 
 
