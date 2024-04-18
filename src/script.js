@@ -131,7 +131,7 @@ function kiBlastOne(i, oppPlayerStats, name1, name2) {
 }
 function kamahamahaWaveOne(i, oppPlayerStats, name1, name2) { 
     let random = Math.floor(Math.random() * 1000)
-    let punchMulti = random * 90
+    let punchMulti = random * 120
     let newStats = oppPlayerStats.textContent
     oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
     if (i == 1){
