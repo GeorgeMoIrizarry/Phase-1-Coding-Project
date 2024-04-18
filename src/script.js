@@ -198,9 +198,9 @@ function kikoukenjutsuSwordStyleOne(i, oppPlayerStats, name1, name2) {
         let newStats = oppPlayerStats.textContent
         oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
         if (i == 1){
-        alertFunc1(name1, "blasted", name2, punchMulti)
+        alertFunc1(name1, "sliced", name2, punchMulti)
         } else if (i == 2) {
-          alertFunc2(name1, "blasted", name2, punchMulti)
+          alertFunc2(name1, "sliced", name2, punchMulti)
         }
     }
 }
@@ -236,6 +236,36 @@ function masenkoOne(i, oppPlayerStats, name1, name2) {
         }
     }
 }
+
+function specialBeamOne(i, oppPlayerStats, name1, name2) {
+    if(playerOneName.textContent == 'Goku' || playerTwoName.textContent == 'Goku'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 115
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 65
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+        } else if (i == 2) {
+          alertFunc2(name1, "blasted", name2, punchMulti)
+        }
+    }
+}
+
+
+
+
+
+
 
 let evenCheck = 2
 function isEven(number) {
@@ -275,8 +305,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Special beam cannon' :
-                    //function
-                    //evenCheck++
+                    specialBeamOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Spirit bomb' :
                     //function
@@ -337,8 +367,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Special beam cannon' :
-                    //function
-                    //evenCheck++
+                    specialBeamOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Spirit bomb' :
                     //function
