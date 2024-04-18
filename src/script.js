@@ -349,7 +349,18 @@ function triBeamOne(i, oppPlayerStats, name1, name2) {
         }
     }
 }
-
+function destructoDiskOne(i, oppPlayerStats, name1, name2) { 
+    let random = Math.floor(Math.random() * 1000)
+    let punchMulti = random * 105
+    let newStats = oppPlayerStats.textContent
+    oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+    if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+    }
+  
+}
 
 let evenCheck = 2
 function isEven(number) {
@@ -405,8 +416,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Destructo disk' :
-                    //function
-                    //evenCheck++
+                    destructoDiskOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Hyper blitz' :
                     //function
@@ -467,8 +478,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Destructo disk' :
-                    //function
-                    //evenCheck++
+                    destructoDiskOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Hyper blitz' :
                     //function
