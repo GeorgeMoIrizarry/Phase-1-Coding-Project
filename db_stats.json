@@ -3,11 +3,11 @@
         {
             "id":"1",
             "name":"Goku",
-            "powerlevel": "280,000",
+            "powerlevel": "280000",
             "attacks": [
-                "punch",
-                "ki_blast",
-                "kamehameha_wave"
+                "Punch",
+                "Ki blast",
+                "Kamehameha wave"
             ],
             "planetoforigin": "Vegeta"
         },
@@ -15,11 +15,11 @@
         {
             "id":"2",
             "name":"Vegeta",
-            "powerlevel": "240,000",
+            "powerlevel": "240000",
             "attacks":[
-                "punch",
-                "final_flash",
-                "big_bang"
+                "Punch",
+                "Final flash",
+                "Ki blast"
             ],
             "planetoforigin": "Vegeta"
         },
@@ -27,11 +27,11 @@
         {
             "id":"3",
             "name":"Roshi",
-            "powerlevel": "110,000",
+            "powerlevel": "110000",
             "attacks":[
-                "punch",
-                "kamehameha_wave",
-                "ki_blast"
+                "Punch",
+                "Kamehameha wave",
+                "Ki blast"
             ],
             "planetoforigin": "Earth"
         },
@@ -39,11 +39,11 @@
         {
             "id":"4",
             "name":"Trunks",
-            "powerlevel": "240,000",
+            "powerlevel": "240000",
             "attacks":[
-                "punch",
-                "kikoukenjutsu_sword_style",
-                "ki_blast"
+                "Punch",
+                "Kikoukenjutsu sword style",
+                "Ki blast"
             ],
             "planetoforigin":"Earth"
         },
@@ -51,11 +51,11 @@
         {
             "id":"5",
             "name":"Gohan",
-            "powerlevel": "220,000",
+            "powerlevel": "220000",
             "attacks":[
-                "punch",
-                "burst_rush",
-                "masenko"
+                "Punch",
+                "Ki blast",
+                "Masenko"
             ],
             "planetoforigin":"Earth"
         },
@@ -63,11 +63,11 @@
         {
             "id":"6",
             "name":"Piccolo",
-            "powerlevel":"160,000",
+            "powerlevel":"160000",
             "attacks":[
-                "punch",
-                "masenko",
-                "special_beam_cannon"
+                "Punch",
+                "Masenko",
+                "Special beam cannon"
             ],
             "planetoforigin":"Namek"
         },
@@ -75,23 +75,23 @@
         {
             "id":"7",
             "name":"Cell",
-            "powerlevel":"260,000",
+            "powerlevel":"260000",
             "attacks":[
-                "punch",
-                "kamehameha_wave",
-                "spirit_bomb"
+                "Punch",
+                "Kamehameha wave",
+                "Spirit bomb"
             ],
             "planetoforigin":"Earth"
         },
 
         {
             "id":"8",
-            "name":"MajinBoo",
-            "powerlevel":"270,000",
+            "name":"MajinBuu",
+            "powerlevel":"270000",
             "attacks":[
-                "punch",
-                "gack",
-                "angry_explosion"
+                "Punch",
+                "Ki blast",
+                "Angry explosion"
             ],
             "planetoforigin":"UNKNOWN"
         },
@@ -99,33 +99,33 @@
         {
             "id":"9",
             "name":"Tien",
-            "powerlevel":"140,000",
+            "powerlevel":"140000",
             "attacks":[
-                "punch",
-                "tribeam",
-                "ki_blast"
+                "Punch",
+                "Tribeam",
+                "Ki blast"
             ],
             "planetoforigin":"Earth"
         },
 
         {   "id":"10",
             "name":"Android 18",
-            "powerlevel":"190,000",
+            "powerlevel":"190000",
             "attacks":[
-                "punch",
-                "destructo_disk",
-                "hyper_blitz"
+                "Punch",
+                "Destructo disk",
+                "Hyper blitz"
             ],
             "planetoforigin":"Earth"
         },
 
         {   "id":"11",
             "name":"Krillin",
-            "powerlevel":"150,000",
+            "powerlevel":"150000",
             "attacks":[
-                "punch",
-                "destructo_disk",
-                "kamehameha_wave"
+                "Punch",
+                "Destructo disk",
+                "Kamehameha wave"
             ],
             "planetoforigin":"Earth"
         }
