@@ -315,6 +315,40 @@ function angryExplosionOne(i, oppPlayerStats, name1, name2) {
   
 }
 
+function triBeamOne(i, oppPlayerStats, name1, name2) {
+    if(playerOneName.textContent == 'Vegeta' || playerTwoName.textContent == 'Vegeta'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 150
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else if (playerOneName.textContent == 'Cell' || playerTwoName.textContent == 'Cell') {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 120
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+   
+     } else {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+     }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 60
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+        } else if (i == 2) {
+          alertFunc2(name1, "blasted", name2, punchMulti)
+        }
+    }
+}
 
 
 let evenCheck = 2
@@ -367,8 +401,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Tribeam' :
-                    //function
-                    //evenCheck++
+                    triBeamOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Destructo disk' :
                     //function
@@ -429,8 +463,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Tribeam' :
-                    //function
-                    //evenCheck++
+                    triBeamOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Destructo disk' :
                     //function
