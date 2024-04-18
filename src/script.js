@@ -362,6 +362,40 @@ function destructoDiskOne(i, oppPlayerStats, name1, name2) {
   
 }
 
+function hyperBlitzOne(i, oppPlayerStats, name1, name2) {
+    if(playerOneName.textContent == 'Gohan' || playerTwoName.textContent == 'Gohan'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 200
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else if (playerOneName.textContent == 'Trunks' || playerTwoName.textContent == 'Trunks') {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 160
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+   
+     } else {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+     }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 60
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+        } else if (i == 2) {
+          alertFunc2(name1, "blasted", name2, punchMulti)
+        }
+    }
+}
 let evenCheck = 2
 function isEven(number) {
     return (number & 1) === 0;
@@ -420,8 +454,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Hyper blitz' :
-                    //function
-                    //evenCheck++
+                    hyperBlitzOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 default :
                     console.log('fail')
@@ -482,8 +516,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Hyper blitz' :
-                    //function
-                    //evenCheck++
+                    hyperBlitzOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 default :
                     console.log('fail')
@@ -499,24 +533,3 @@ const handleAtk = () => {
 }
 const fightBtn = document.querySelector("#launch-battle")
 fightBtn.addEventListener('click', handleAtk)
-
-
-
-
-
-
-
-// const fightBtn = document.querySelector("#launch-battle")
-// fightBtn.addEventListener("click", () => {
-//     if(selected === 2){
-//         if(playerOneNameStats.textContent >= playerTwoNameStats.textContent){
-//             console.log(playerOneNameStats.textContent)
-//             console.log(playerTwoNameStats.textContent)
-//             alert(`${playerOneName.textContent} wins!`)
-            
-//         } else {
-//             alert(`${playerTwoName.textContent} wins`)
-            
-//         }
-//     } else return false
-// })
