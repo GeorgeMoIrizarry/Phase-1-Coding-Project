@@ -302,7 +302,18 @@ function spiritBombOne(i, oppPlayerStats, name1, name2) {
     }
 }
 
-
+function angryExplosionOne(i, oppPlayerStats, name1, name2) { 
+    let random = Math.floor(Math.random() * 1000)
+    let punchMulti = random * 110
+    let newStats = oppPlayerStats.textContent
+    oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+    if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+    }
+  
+}
 
 
 
@@ -352,8 +363,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Angry explosion' :
-                    //function
-                    //evenCheck++
+                    angryExplosionOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Tribeam' :
                     //function
@@ -414,8 +425,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Angry explosion' :
-                    //function
-                    //evenCheck++
+                    angryExplosionOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Tribeam' :
                     //function
