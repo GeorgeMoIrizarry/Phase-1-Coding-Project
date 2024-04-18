@@ -159,6 +159,8 @@ function finalFlashOne(i, oppPlayerStats, name1, name2) {
         if (i == 1){
         alertFunc1(name1, "destroyed", name2, punchMulti)
    
+     } else {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
      }
     } else {
         let random = Math.floor(Math.random() * 1000)
@@ -191,6 +193,8 @@ function kikoukenjutsuSwordStyleOne(i, oppPlayerStats, name1, name2) {
         if (i == 1){
         alertFunc1(name1, "destroyed", name2, punchMulti)
    
+     } else {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
      }
     } else {
         let random = Math.floor(Math.random() * 1000)
@@ -223,6 +227,8 @@ function masenkoOne(i, oppPlayerStats, name1, name2) {
         if (i == 1){
         alertFunc1(name1, "destroyed", name2, punchMulti)
    
+     } else {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
      }
     } else {
         let random = Math.floor(Math.random() * 1000)
