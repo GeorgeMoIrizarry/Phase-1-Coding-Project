@@ -109,17 +109,25 @@ function alertFunc2(two, atk, one, dmg) {
 function punchOne(i, oppPlayerStats, name1, name2) {
     let random = Math.floor(Math.random() * 1000)
     let punchMulti = random * 40
-    let newStats = oppPlayerStats
-    oppPlayerStats = parseInt(newStats, 10) - punchMulti
-    alertFunc[i](name1, "punched", name2, punchMulti)
+    let newStats = oppPlayerStats.textContent
+    oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+    if (i == 1){
+    alertFunc1(name1, "punched", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "punched", name2, punchMulti)
+    }
 }
-// function punchTwo() {
-//     let random = Math.floor(Math.random() * 1000)
-//     let punchMulti = random * 40
-//     let newStats = playerOneNameStats.textContent
-//     playerOneNameStats.textContent = parseInt(newStats, 10) - punchMulti
-//     alertFunc1(playerTwoName.textContent, "punched", playerOneName.textContent, punchMulti)
-// }
+function kiBlastOne(i, oppPlayerStats, name1, name2) {
+    let random = Math.floor(Math.random() * 1000)
+    let punchMulti = random * 50
+    let newStats = oppPlayerStats.textContent
+    oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+    if (i == 1){
+    alertFunc1(name1, "blasted", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+    }
+}
 let evenCheck = 2
 function isEven(number) {
     return (number & 1) === 0;
@@ -134,11 +142,11 @@ const handleAtk = () => {
             
             switch (e.target.value) {
                 case 'Punch' :
-                    punchOne("1", playerTwoNameStats.textContent, playerOneName.textContent, playerTwoName.textContent)
+                    punchOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
                     evenCheck++
                     break;
                 case 'Ki blast' :
-                    //function
+                    kiBlastOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
                     break;
                 case 'Kamehameha wave' :
                     //function
@@ -185,11 +193,11 @@ const handleAtk = () => {
             
             switch (e.target.value) {
                 case 'Punch' :
-                    punchOne(2, playerOneNameStats.textContent, playerTwoName.textContent, playerOneName.textContent)
+                    punchOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
                     evenCheck++
                     break;
                 case 'Ki blast' :
-                    kiBlastTwo()
+                    kiBlastOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
                     break;
                 case 'Kamehameha wave' :
                     kamahamahaWave
