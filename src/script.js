@@ -17,7 +17,7 @@ const playerTwoNameStats = document.querySelector("#introduce-player2-stats")
 const playerTwoNameCard = document.querySelector("#card-player2")
 
 const url = "http://localhost:3000/fighters"
-
+//Populate fighter cards
 const popFighterInfo = (images) => {
     let imgTar = images.target
     console.log(imagePlayOne.src)
@@ -73,6 +73,10 @@ function placeCards(fighters) {
     })
 }
 }
+//User interactivity 
+const mouseOut = (element) => {
+    element.target.style.border = `none`
+}
 const mouseOver = (element) => {
     element.target.style.border = '1px solid yellow'
 }    
@@ -81,9 +85,7 @@ const fighterCards = document.querySelectorAll(".fighter-images")
 const fighterCard = () => {
     fighterCards.forEach(element => {
         element.addEventListener('mouseover', mouseOver)
-        element.addEventListener('mouseout', () => {
-            element.style.border = `none`
-        })
+        element.addEventListener('mouseout', mouseOut)
         element.addEventListener('click', popFighterInfo)
         element.addEventListener('click', () => {
             element.style.border = '4px solid yellow'
@@ -91,7 +93,7 @@ const fighterCard = () => {
     });
 }
 fighterCard()
-
+// Win alert functions
 function alertFunc1(one, atk, two, dmg) {
     alert(`${one} ${atk} ${two} for ${dmg} damage! `)
     if(playerTwoNameStats.textContent <= 0) {
@@ -396,6 +398,8 @@ function hyperBlitzOne(i, oppPlayerStats, name1, name2) {
         }
     }
 }
+// End of attacks
+//Attack Inputs
 let evenCheck = 2
 function isEven(number) {
     return (number & 1) === 0;
