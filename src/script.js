@@ -172,6 +172,31 @@ function finalFlashOne(i, oppPlayerStats, name1, name2) {
         }
     }
 }
+function kikoukenjutsuSwordStyleOne(i, oppPlayerStats, name1, name2){
+    if(playerOneName.textContent == 'Android 18' || playerTwoName.textContent == 'Android 18'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 140
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 80
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+            alertFunc1(name1, "sliced", name2, punchMulti)
+        } else if (i == 2) {
+            alertFunc2(name1, "sliced", name2, punchMulti)
+        }
+    }
+}
+
+
 let evenCheck = 2
 function isEven(number) {
     return (number & 1) === 0;
@@ -202,36 +227,36 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Kikoukenjutsu sword style' :
-                    //function
+                    kikoukenjutsuSwordStyleOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
                     evenCheck++
                     break;
                 case 'Masenko' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Special beam cannon' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Spirit bomb' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Angry explosion' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Tribeam' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Destructo disk' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Hyper blitz' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 default :
                     console.log('fail')
@@ -264,36 +289,36 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Kikoukenjutsu sword style' :
-                    //function
+                    kikoukenjutsuSwordStyleOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
                     evenCheck++
                     break;
                 case 'Masenko' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Special beam cannon' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Spirit bomb' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Angry explosion' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Tribeam' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Destructo disk' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 case 'Hyper blitz' :
                     //function
-                    evenCheck++
+                    //evenCheck++
                     break;
                 default :
                     console.log('fail')
