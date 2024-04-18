@@ -100,7 +100,7 @@ function alertFunc1(one, atk, two, dmg) {
 }
 function alertFunc2(two, atk, one, dmg) {
     alert(`${two} ${atk} ${one} for ${dmg} damage! `)
-    if(playerTwoNameStats.textContent <= 0) {
+    if(playerOneNameStats.textContent <= 0) {
         alert(`${two} wins!`)
     } else return false 
 }
@@ -108,7 +108,7 @@ function alertFunc2(two, atk, one, dmg) {
 // Attack functions
 function punchOne(i, oppPlayerStats, name1, name2) {
     let random = Math.floor(Math.random() * 1000)
-    let punchMulti = random * 40
+    let punchMulti = random * 35
     let newStats = oppPlayerStats.textContent
     oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
     if (i == 1){
@@ -119,13 +119,57 @@ function punchOne(i, oppPlayerStats, name1, name2) {
 }
 function kiBlastOne(i, oppPlayerStats, name1, name2) {
     let random = Math.floor(Math.random() * 1000)
-    let punchMulti = random * 50
+    let punchMulti = random * 45
     let newStats = oppPlayerStats.textContent
     oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
     if (i == 1){
     alertFunc1(name1, "blasted", name2, punchMulti)
     } else if (i == 2) {
         alertFunc2(name1, "blasted", name2, punchMulti)
+    }
+}
+function kamahamahaWaveOne(i, oppPlayerStats, name1, name2) { 
+    let random = Math.floor(Math.random() * 1000)
+    let punchMulti = random * 90
+    let newStats = oppPlayerStats.textContent
+    oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+    if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+    }
+  
+}
+function finalFlashOne(i, oppPlayerStats, name1, name2) {
+    if(playerOneName.textContent == 'Goku' || playerTwoName.textContent == 'Goku'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 140
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else if (playerOneName.textContent == 'MajinBuu' || playerTwoName.textContent == 'MajinBuu') {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 140
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+   
+     }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 80
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+        } else if (i == 2) {
+          alertFunc2(name1, "blasted", name2, punchMulti)
+        }
     }
 }
 let evenCheck = 2
@@ -147,36 +191,47 @@ const handleAtk = () => {
                     break;
                 case 'Ki blast' :
                     kiBlastOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Kamehameha wave' :
-                    //function
+                    kamahamahaWaveOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Final flash' :
-                    //function
+                    finalFlashOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Kikoukenjutsu sword style' :
                     //function
+                    evenCheck++
                     break;
                 case 'Masenko' :
                     //function
+                    evenCheck++
                     break;
                 case 'Special beam cannon' :
                     //function
+                    evenCheck++
                     break;
                 case 'Spirit bomb' :
                     //function
+                    evenCheck++
                     break;
                 case 'Angry explosion' :
                     //function
+                    evenCheck++
                     break;
                 case 'Tribeam' :
                     //function
+                    evenCheck++
                     break;
                 case 'Destructo disk' :
                     //function
+                    evenCheck++
                     break;
                 case 'Hyper blitz' :
                     //function
+                    evenCheck++
                     break;
                 default :
                     console.log('fail')
@@ -198,36 +253,47 @@ const handleAtk = () => {
                     break;
                 case 'Ki blast' :
                     kiBlastOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Kamehameha wave' :
-                    kamahamahaWave
+                    kamahamahaWaveOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Final flash' :
-                    //function
+                    finalFlashOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Kikoukenjutsu sword style' :
                     //function
+                    evenCheck++
                     break;
                 case 'Masenko' :
                     //function
+                    evenCheck++
                     break;
                 case 'Special beam cannon' :
                     //function
+                    evenCheck++
                     break;
                 case 'Spirit bomb' :
                     //function
+                    evenCheck++
                     break;
                 case 'Angry explosion' :
                     //function
+                    evenCheck++
                     break;
                 case 'Tribeam' :
                     //function
+                    evenCheck++
                     break;
                 case 'Destructo disk' :
                     //function
+                    evenCheck++
                     break;
                 case 'Hyper blitz' :
                     //function
+                    evenCheck++
                     break;
                 default :
                     console.log('fail')
