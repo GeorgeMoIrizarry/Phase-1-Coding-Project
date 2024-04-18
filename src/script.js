@@ -267,7 +267,40 @@ function specialBeamOne(i, oppPlayerStats, name1, name2) {
     }
 }
 
-
+function spiritBombOne(i, oppPlayerStats, name1, name2) {
+    if(playerOneName.textContent == 'Goku' || playerTwoName.textContent == 'Goku'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 200
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else if (playerOneName.textContent == 'Gohan' || playerTwoName.textContent == 'Gohan') {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 60
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+   
+     } else {
+        alertFunc2(name1, "blasted", name2, punchMulti)
+     }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 60
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+        } else if (i == 2) {
+          alertFunc2(name1, "blasted", name2, punchMulti)
+        }
+    }
+}
 
 
 
@@ -315,8 +348,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Spirit bomb' :
-                    //function
-                    //evenCheck++
+                    spiritBombOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Angry explosion' :
                     //function
@@ -377,8 +410,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Spirit bomb' :
-                    //function
-                    //evenCheck++
+                    spiritBombOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Angry explosion' :
                     //function
