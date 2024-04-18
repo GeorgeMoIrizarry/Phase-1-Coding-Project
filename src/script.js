@@ -172,7 +172,7 @@ function finalFlashOne(i, oppPlayerStats, name1, name2) {
         }
     }
 }
-function kikoukenjutsuSwordStyleOne(i, oppPlayerStats, name1, name2){
+function kikoukenjutsuSwordStyleOne(i, oppPlayerStats, name1, name2) {
     if(playerOneName.textContent == 'Android 18' || playerTwoName.textContent == 'Android 18'){
         let random = Math.floor(Math.random() * 1000)
         let punchMulti = random * 140
@@ -183,19 +183,59 @@ function kikoukenjutsuSwordStyleOne(i, oppPlayerStats, name1, name2){
     } else if (i == 2) {
         alertFunc2(name1, "destroyed", name2, punchMulti)
     }
+    } else if (playerOneName.textContent == 'Cell' || playerTwoName.textContent == 'Cell') {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 140
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+   
+     }
     } else {
         let random = Math.floor(Math.random() * 1000)
         let punchMulti = random * 80
         let newStats = oppPlayerStats.textContent
         oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
         if (i == 1){
-            alertFunc1(name1, "sliced", name2, punchMulti)
+        alertFunc1(name1, "blasted", name2, punchMulti)
         } else if (i == 2) {
-            alertFunc2(name1, "sliced", name2, punchMulti)
+          alertFunc2(name1, "blasted", name2, punchMulti)
         }
     }
 }
-
+function masenkoOne(i, oppPlayerStats, name1, name2) {
+    if(playerOneName.textContent == 'Android 18' || playerTwoName.textContent == 'Android 18'){
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 120
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+    } else if (i == 2) {
+        alertFunc2(name1, "destroyed", name2, punchMulti)
+    }
+    } else if (playerOneName.textContent == 'Cell' || playerTwoName.textContent == 'Cell') {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 150
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "destroyed", name2, punchMulti)
+   
+     }
+    } else {
+        let random = Math.floor(Math.random() * 1000)
+        let punchMulti = random * 65
+        let newStats = oppPlayerStats.textContent
+        oppPlayerStats.textContent = parseInt(newStats, 10) - punchMulti
+        if (i == 1){
+        alertFunc1(name1, "blasted", name2, punchMulti)
+        } else if (i == 2) {
+          alertFunc2(name1, "blasted", name2, punchMulti)
+        }
+    }
+}
 
 let evenCheck = 2
 function isEven(number) {
@@ -231,8 +271,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Masenko' :
-                    //function
-                    //evenCheck++
+                    masenkoOne(1, playerTwoNameStats, playerOneName.textContent, playerTwoName.textContent)
+                    evenCheck++
                     break;
                 case 'Special beam cannon' :
                     //function
@@ -293,8 +333,8 @@ const handleAtk = () => {
                     evenCheck++
                     break;
                 case 'Masenko' :
-                    //function
-                    //evenCheck++
+                    masenkoOne(2, playerOneNameStats, playerTwoName.textContent, playerOneName.textContent)
+                    evenCheck++
                     break;
                 case 'Special beam cannon' :
                     //function
