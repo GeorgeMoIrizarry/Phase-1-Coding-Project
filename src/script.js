@@ -20,7 +20,6 @@ const url = "http://localhost:3000/fighters"
 //Populate fighter cards
 const popFighterInfo = (images) => {
     let imgTar = images.target
-    console.log(imagePlayOne.src)
     fetch(url)
     .then((resp) => resp.json())
     .then((data) => placeCards(data))

@@ -43,7 +43,6 @@ main {
 }
 
 .header {
-    /* -webkit-text-stroke: 1px #000000c5; */
     align-items: center;
     color: yellow;
 }
@@ -174,18 +173,6 @@ main {
     color : white
 }
 
-/* .grid-list {
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem;
-
-    margin-top: 10rem;
-    padding: 2rem 4rem;
-    margin-inline-end: -2rem;
-
-    scrollbar-color: transparent transparent;
-} */
 
 .card-character {
     display: flex;
